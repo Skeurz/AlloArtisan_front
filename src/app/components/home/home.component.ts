@@ -21,5 +21,7 @@ export class HomeComponent {
   onLogout() {
     localStorage.removeItem('access_token');
   }
+
+
 }
 

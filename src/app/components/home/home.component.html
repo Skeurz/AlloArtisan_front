@@ -12,14 +12,15 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="home.component.css">
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
   <script defer src="app.js" ></script>
 </head>
 
 <body>
 
-<section class="hidden">
-    <h1>Services artisanaux aux bouts des doigts</h1>
+<section class="section1">
+    <h1 class="premier">Services artisanaux aux bouts des doigts</h1>
+    
    <!-- <div class="slider-frame"><div class="slide-images">
         <div class="img-container">
      <img src="https://images.pexels.com/photos/13794443/pexels-photo-13794443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400"
@@ -35,25 +36,80 @@
        </div>
   </div>
 </div>-->
-    <p><img src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400"
-        height="400" class="image">
-        
+    <p><img src="https://images.pexels.com/photos/1094767/pexels-photo-1094767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="image"     
+        style="">  
+        <img src="https://images.pexels.com/photos/11091016/pexels-photo-11091016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="image"
+        style="display: none;">
+        <img src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="image" 
+        style="display: none;">  
         Avez vous besoin de trauvaux que ça soit en menuiseries, construction, carrelage, plomberies, jardinage ou n'importe quel 
         travaux artisanaux ? <b style="color:#1c498d; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">AlloArtisan</b> 
-        vous liera avec un artisan professionel en quelques cliques!
-       <br><br> <br>  <a *ngIf="!loggedin()" class="btn" style="background-color: #1c498d; color: white; font-weight: 600; width: 200px;" href="login">S'inscrire >></a></p>
-    
+        vous liera avec un artisan professionel en quelques cliques !
+       <br><br> <br>  <a *ngIf="!loggedin()" class="btn" style="background-color: #1c498d; color: white;" href="authentifier">S'inscrire >></a></p>
+       
+       
+      <!-- <script type="text/javascript">
+        let image = document.getElementById('image');
+        let images = ['https://images.pexels.com/photos/11091016/pexels-photo-11091016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        ,'https://images.pexels.com/photos/1094767/pexels-photo-1094767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        ,'https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1']
+        setInterval(function(){ let random=Math.floor(Math.random()*4);
+        image.src=images[random];},800);
+       </script>-->
+       <script>
+        var images = []
+        images[0]=['https://images.pexels.com/photos/11091016/pexels-photo-11091016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'];
+        images[1]=['https://images.pexels.com/photos/1094767/pexels-photo-1094767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'];
+        images[2]=['https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'];
+       </script>
 </section>
-<section class="hidden">
-    <h2>Titre 2 </h2>
-    <p>Textualities</p>
+
+
+<section class="section 2">
+    <div class="row">
+        <div class="card">
+        <h1 class="who">Qui sommes nous ? </h1>
+        <p class="nous">On est une poignée d'étudiants amateurs en programmation qui sont entrain de passer leur license professionel et ceci est comme projet PFE.</p>
+        </div>
+    </div>
 </section>
-<section class="hidden">
-    <h2>Titre 2 </h2>
-    <p>Textualities</p>
+<section>
+<div class="timeline">
+    <div class="outer">
+      <div class="cardd">
+        <div class="info">
+          <h3 class="title">Étape 1 : Inscription</h3>
+          <p>Commencez par créer un compte en cliquant<a href="authentifier">ici.</a></p>
+        </div>
+      </div>
+      <div class="cardd">
+        <div class="info">
+          <h3 class="title">Étape 2 : Connexion</h3>
+          <p>Si vous posséder déjà un compte ou après la création de votre compte <a href="login">connectez-vous</a>.</p>
+        </div>
+      </div>
+      <div class="cardd">
+        <div class="info">
+          <h3 class="title">Étape 3 : Choisir votre rôle</h3>
+          <p>Vous pouvez choisir votre rôle ainsi que modifier vos données personnelles dans l'interface profile.</p>
+        </div>
+      </div>
+      <div class="cardd">
+        <div class="info">
+          <h3 class="title">Étape 4 : Lancer une offre ou un besoin</h3>
+          <p>Vous pourrez désormais lancer une offre ou un besoin en fonction de votre rôle choisi précedemment.</p>
+        </div>
+      </div>     
+    </div>
+  </div>
 </section>
-<section class="hidden">
-    <h2>Titre 2 </h2>
-    <p>Textualities</p>
+
+
+
+<section>
+    <h2>  </h2>
+    <p></p>
 </section>
+
+
 </body>

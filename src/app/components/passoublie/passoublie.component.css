@@ -9,7 +9,7 @@
     min-height: 100vh;
     width: 100%;
     font-size: 14px; 
-    color: #696969;
+    color: #ffffff;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@
 }
   .container {
     max-width: 320px;
-    background-color: #fff;
+    background-color: #212529;
     padding: 24px;
     padding-bottom: 12px;
     border-radius: 4px;
@@ -44,7 +44,7 @@
     font-weight: bold;
     letter-spacing: 1px;
     padding: 4px 0;
-    border-bottom: 2px solid #0a25c0;
+    border-bottom: 2px solid #2e44c2;
     margin-bottom: 20px;
   }
   button.submit {
@@ -54,7 +54,7 @@
     cursor: pointer;
     color: #fff;
     border-radius: 4px;
-    background-image: linear-gradient(to right, #df1818, #0a25c0, #df1818 );
+    background-image: linear-gradient(to right, #1c498d, #df1818, #1c498d );
     background-size: 300% 100%;    
     transition: background-position 0.4s;
   }

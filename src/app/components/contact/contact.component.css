@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   width: 100%;
   font-size: 14px; 
-  color: #696969;
+  color: #ffffff;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +46,7 @@ button {
 
 .contact-container {
   max-width: 720px;
-  background-color: #fff;
+  background-color: #212529;
   padding: 24px;
   padding-bottom: 12px;
   border-radius: 4px;
@@ -69,7 +69,7 @@ select{
   font-weight: bold;
   letter-spacing: 1px;
   padding: 4px 0;
-  border-bottom: 2px solid #0a25c0;
+  border-bottom: 2px solid #2e44c2;
   margin-bottom: 20px;
 }
 
@@ -77,7 +77,7 @@ select{
   text-align: center;
   font-size: 0.9em;
   margin-bottom: 20px;
-  color: #696969b0;
+  color: rgb(255, 255, 255);
   line-height: 18px;
 }
 
@@ -120,7 +120,7 @@ button.submit {
   cursor: pointer;
   color: #fff;
   border-radius: 4px;
-  background-image: linear-gradient(to right, #df1818, #1c498d, #df1818 );
+  background-image: linear-gradient(to right, #1c498d, #df1818, #1c498d );
   background-size: 300% 100%;    
   transition: background-position 0.4s;
 }
