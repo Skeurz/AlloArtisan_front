@@ -27,7 +27,7 @@ export class InscriptionFormComponent implements OnInit {
   }
   onSubmitForm() {
 
-    this.liste.ajouterUser(this.artisanForm.value).subscribe();
+    //this.liste.ajouterUser(this.artisanForm.value).subscribe();
     console.log(this.artisanForm.value);
     
     //this.liste.addRoleToUser

@@ -1,20 +1,6 @@
 
-a{
-    color: white;
-font-size:22px;
-font-weight: bold;}
-  h1{
-    display: block;
-  font-style: italic;
-  text-align: center;
-  
-
-  }
-  h3{
-    display: block;
-  font-style: italic;
-  text-align: center;
-  color:rgb(190, 190, 18);
-
-  }
-  
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:4}

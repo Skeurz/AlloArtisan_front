@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-
+  public showMyMessage = false
+  showMessageSoon() {
+    setTimeout(() => {
+      this.showMyMessage = true
+    }, 1000)
+  }
 }

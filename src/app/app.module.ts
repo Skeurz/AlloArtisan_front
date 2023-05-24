@@ -13,6 +13,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ListServiceComponent } from './components/list-service/list-service.component';
 import { ListBesoinsComponent } from './components/list-besoins/list-besoins.component';
 import { OffreComponent } from './components/offre/offre.component';
+import { PassoublieComponent } from './components/passoublie/passoublie.component';
+import { AuthentificationServiceService } from './core/services/authentification-service.service';
+
 
 
 
@@ -28,6 +31,7 @@ import { OffreComponent } from './components/offre/offre.component';
     ListServiceComponent,
     ListBesoinsComponent,
     OffreComponent,
+    PassoublieComponent,
     
     
   ],
@@ -37,11 +41,9 @@ import { OffreComponent } from './components/offre/offre.component';
     FormsModule,
     ReactiveFormsModule,
     CoreModule,
-    
-    
-
   ],
-  providers: [],
+  providers: [AuthentificationServiceService],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

@@ -1,6 +1,54 @@
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="/assets/images/borderized.png" height="50"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link mx-2" aria-current="page" routerLink="artisans">Artisans</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="besoin"><script></script>Besoins</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="service">Offres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="contact">Contact</a>
+        </li>
+        <li class="dropdown" *ngIf="!loggedin()">
+          <a class="btn dropdown-toggle" style="background-color: #1c498d; color: white;" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            S'authentifier
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="authentifier">S'inscrire</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" routerLink="login">Se connecter</a></li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown" *ngIf="loggedin()">
+          <a class="nav-link mx-2" style="font-weight: 600; cursor: pointer;" data-bs-toggle="dropdown" aria-expanded="false">
+            Bienvenu !</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="login/user"><i class="fas fa-user-circle"></i> Mon profil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" routerLink="/" (click)="onLogout()" style="color: red;"><i class=" fas fa-sign-out-alt"></i> Se déconnecter</a></li>
+          </ul>
+        </li>
+        <!--<li class="nav-item" *ngIf="loggedin()">
+        <a class="btn btn-danger" (click)="onLogout()">Se déconnecter</a>
+        </li>-->
+      </ul>
+    </div>
+  </div>
+  </nav>
+  
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,24 +62,23 @@
         <a class="nav-link"  style="padding-left: 30px;" routerLink="artisans" >Artisan</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="besoin">Besoin</a>
+        <a class="nav-link" routerLink="besoin">Offres</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="service">Services</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" >
         <a class="nav-link"  routerLink="contact" >Contact</a>
-      </li>
-     
+      </li>      
       <li class="nav-item pl-5">
-        <a class="nav-link pl-5" style="padding-left: 800px;" routerLink="authentifier">s'authentifier </a>
+        <a class="nav-link pl-5" routerLink="authentifier">S'inscrire </a>
+      </li>
+      <li>
+        <a class="navbar"> | </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" > | </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"  routerLink="login">s'inscire </a>
+        <a class="nav-link"  routerLink="login">Connexion </a>
       </li>
     </ul>
-  </div>
-</nav>
+    </div>
+</nav> -->

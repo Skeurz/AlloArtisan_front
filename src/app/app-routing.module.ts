@@ -7,13 +7,15 @@ import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { ListServiceComponent } from './components/list-service/list-service.component';
 import { ListBesoinsComponent } from './components/list-besoins/list-besoins.component';
+import { PassoublieComponent } from './components/passoublie/passoublie.component';
 
 
 
 const routes: Routes = [
-  {path : '',component: HomeComponent},
+  {path :'',component: HomeComponent},
+  {path :'passoublie',component: PassoublieComponent},
   {path :'contact',component: ContactComponent },
-  {path : 'authentifier',component: InscriptionFormComponent},
+  {path :'authentifier',component: InscriptionFormComponent},
   {path :'artisans',component: ArtisanListComponent},
   {path :'service',component: ListServiceComponent},
   {path :'besoin',component: ListBesoinsComponent},

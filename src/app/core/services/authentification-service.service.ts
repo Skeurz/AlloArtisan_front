@@ -19,10 +19,18 @@ export class AuthentificationServiceService {
 
   constructor(private http: HttpClient) { }
 
-  login(user:User):Observable<Itoken>{
-    return this.http.post<Itoken>(`${this.urlApi}/authenticate`,user);
-        
-  }
+  /*authUser(user: any) {
+    let UserArray= [];
+    if(localStorage.getItem('Users')) {
+      UserArray = JSON.parse(localStorage.getItem('Users')!);
+    }
+    return UserArray.find((p: { userName: any; password: any; }) => p.userName === user.userName && p.password===user.password);
+  }*/
+
+ login(user:User):Observable<Itoken>{
+ return this.http.post<Itoken>(`${this.urlApi}/authenticate`,user);}
+
+
  
   
   ajouterUser(user: User): Observable<User> {

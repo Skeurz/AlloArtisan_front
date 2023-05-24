@@ -1,4 +1,38 @@
+<body>
+  <div class="register-container"> 
+    <p class="title">S'inscrire :</p>
+    <p class="welcome-message"> Veuillez fournir les données nécessaires pour s'inscrire </p>
+    <form class="register-form" [formGroup]="artisanForm">
+      <div class="form-control">
+        <input type="text" name="nom" placeholder="Nom" formControlName="nom" required>      
+      </div>
+      <div class="form-control">
+        <input type="text" name="prenom" placeholder="Prénom" formControlName="prenom" required>      
+      </div>
+      <div class="form-control">
+        <input type="text" name="userName" placeholder="Nom d'utilisateur" formControlName="userName" required>      
+      </div>
+      <div class="form-control">
+        <input type="email" name="email" placeholder="Email" formControlName="email" required>      
+      </div>
+      <div class="form-control">
+        <input type="password" name="password" placeholder="Mot de passe" formControlName="password" required>
+      </div>
+      <div class="form-control">
+              <input type="password" name="confirmpassword" placeholder="Confirmer mot de passe" formControlName="confirmpassword" required>
+      </div>
+      <!--<select id="role" class="drop" required>
+        <option class="drop"> artisan</option>
+        <option class="drop"> client</option>
+      </select> -->
+      <button class="submit" (click)="onSubmitForm()">Inscription</button>
+    </form>
+  </div>
+  </body>
+  
 
+
+<!--
 <div class="container" >
   <h2>S'authentifier</h2>
 
@@ -20,14 +54,15 @@
     <label  for="email"></label>
     <input type="email" id="email"   placeholder="E-mails"  formControlName="email">
 
-    <!-- <label for="role"></label>
+     <label for="role"></label>
     <select  id="role" >
 
         <option > artisan </option>
         <option >client</option>
-    </select> -->
+    </select> 
     <button  type="submit"  (click)="onSubmitForm()">Enregistre</button>
-    </form>    </div> 
+    </form>    </div> -->
+  
 
 
 

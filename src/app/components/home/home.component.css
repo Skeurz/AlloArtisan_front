@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+    background-color: black;
+}
+
+body {
+   background-color: black;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   padding: 0;
+   margin: 0;
+   overflow:visible;
+}
+.image{
+    float: right;
+    margin-right: 200px;
+    border-radius: 7px;
+}
+/*@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left:2400px;}
+    50% {left:2400px;}
+    60% {left:120px;}
+    70% {left:1200px;}
+    80% {left:0px;}
+    90% {left:0px;}
+    100% {left:0px;}
+}
+.slider-frame{
+    overflow: hidden;
+    height: 800px;
+    width: 1200px;
+    margin-left: 360px;
+    margin-left: 20px;
+}
+.slide-images{
+    width: 3600px; 
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+.img-container{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}*/
+section {
+    margin-left: 50px;
+    display: grid;
+    place-items: left;
+    align-content: center;
+    min-height: 100vh;
+    padding-bottom: 200px;
+    padding-top: 150px;
+}
+h1{
+    font-weight: 900;font-size: 40px;
+}
+p{
+    font-size: 25px;  
+}
+
+.hidden {
+    opacity:1;
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+}
