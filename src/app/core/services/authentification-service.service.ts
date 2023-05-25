@@ -34,8 +34,12 @@ export class AuthentificationServiceService {
  
   
   ajouterUser(user: User): Observable<User> {
+    
     return this.http.post<User>(`${this.urlApi}/register`, user);
+    
   }
+
+
   getUserProfil(userId: number): Observable<User> {
     return this.http.get<User>(`${this.urlApi}/profil/${userId}`);
 

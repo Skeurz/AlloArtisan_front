@@ -4,6 +4,7 @@ import { HeaderComponent } from './componant/header/header.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './component/footer/footer.component';
+import { InscriptionFormComponent } from '../components/inscription-form/inscription-form.component';
 
 
 
@@ -11,7 +12,7 @@ import { FooterComponent } from './component/footer/footer.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-
+    
   ],
   imports: [
     CommonModule,

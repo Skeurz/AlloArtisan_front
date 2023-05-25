@@ -15,6 +15,8 @@ import { ListBesoinsComponent } from './components/list-besoins/list-besoins.com
 import { OffreComponent } from './components/offre/offre.component';
 import { PassoublieComponent } from './components/passoublie/passoublie.component';
 import { AuthentificationServiceService } from './core/services/authentification-service.service';
+import {HttpClientModule} from '@angular/common/http';
+import { AdminPageComponent } from './components/admin-page/admin-page.component';
 
 
 
@@ -32,6 +34,7 @@ import { AuthentificationServiceService } from './core/services/authentification
     ListBesoinsComponent,
     OffreComponent,
     PassoublieComponent,
+    AdminPageComponent,
     
     
   ],
@@ -41,6 +44,7 @@ import { AuthentificationServiceService } from './core/services/authentification
     FormsModule,
     ReactiveFormsModule,
     CoreModule,
+    HttpClientModule,
   ],
   providers: [AuthentificationServiceService],
   bootstrap: [AppComponent]

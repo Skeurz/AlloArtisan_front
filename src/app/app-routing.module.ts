@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ListServiceComponent } from './components/list-service/list-service.component';
 import { ListBesoinsComponent } from './components/list-besoins/list-besoins.component';
 import { PassoublieComponent } from './components/passoublie/passoublie.component';
+import { AdminPageComponent } from './components/admin-page/admin-page.component';
 
 
 
@@ -19,7 +20,7 @@ const routes: Routes = [
   {path :'artisans',component: ArtisanListComponent},
   {path :'service',component: ListServiceComponent},
   {path :'besoin',component: ListBesoinsComponent},
-
+  {path :'admin',component: AdminPageComponent},
   {path :'login',component: LoginComponent},
   {path :'login/user', loadChildren: () => import('./profil/profil.module').then(m => m.ProfilModule) } 
    
