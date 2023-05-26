@@ -35,7 +35,7 @@ export class PostComponent implements OnInit {
 
   }
   onSubmite() {
-   // console.log(this.userPost.value);
+    console.log(this.userPost.value);
 
     // console.log(this.userPost.value)
     this.liste.lancerPost(this.userPost.value).subscribe();

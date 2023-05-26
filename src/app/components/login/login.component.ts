@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/core/modeles/user';
 import { AuthentificationServiceService } from 'src/app/core/services/authentification-service.service';
@@ -67,6 +67,7 @@ export class LoginComponent implements OnInit {
     
     alertifyjs.set('notifier','position', 'bottom-center');
     alertifyjs.success('Connexion réussi');
+
   },
   error => {
     console.error(error);

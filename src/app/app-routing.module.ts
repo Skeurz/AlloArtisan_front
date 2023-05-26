@@ -9,6 +9,8 @@ import { ListServiceComponent } from './components/list-service/list-service.com
 import { ListBesoinsComponent } from './components/list-besoins/list-besoins.component';
 import { PassoublieComponent } from './components/passoublie/passoublie.component';
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
+import { AdminEditComponent } from './components/admin-edit/admin-edit.component';
+
 
 
 
@@ -21,6 +23,7 @@ const routes: Routes = [
   {path :'service',component: ListServiceComponent},
   {path :'besoin',component: ListBesoinsComponent},
   {path :'admin',component: AdminPageComponent},
+  {path :'admin/edit', component: AdminEditComponent},
   {path :'login',component: LoginComponent},
   {path :'login/user', loadChildren: () => import('./profil/profil.module').then(m => m.ProfilModule) } 
    
@@ -28,7 +31,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

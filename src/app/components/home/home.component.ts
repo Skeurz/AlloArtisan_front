@@ -10,6 +10,7 @@ export class HomeComponent {
 
   
   constructor(){}
+  
   ngOnInit() {}
 
 
@@ -21,7 +22,6 @@ export class HomeComponent {
   onLogout() {
     localStorage.removeItem('access_token');
   }
-
 
 }
 

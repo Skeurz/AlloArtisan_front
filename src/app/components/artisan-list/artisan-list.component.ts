@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { User } from 'src/app/core/modeles/user';
 
 
+
 @Component({
   selector: 'app-artisan-list',
   templateUrl: './artisan-list.component.html',

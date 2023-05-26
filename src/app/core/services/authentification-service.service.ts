@@ -39,6 +39,11 @@ export class AuthentificationServiceService {
     
   }
 
+  getArtisanById(id: number): Observable<User>{
+    //  return this.http.get<User>(`${this.urlApi}user/${id}`)
+    return this.http.get<User>(`${this.urlApi}/profile/${id}`)
+    }
+
 
   getUserProfil(userId: number): Observable<User> {
     return this.http.get<User>(`${this.urlApi}/profil/${userId}`);

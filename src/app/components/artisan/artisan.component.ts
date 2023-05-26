@@ -16,9 +16,9 @@ export class ArtisanComponent implements OnInit {
 
  ngOnInit(){
  }
- onViewEtudiant(){
+ /*onViewEtudiant(){
      this.router.navigateByUrl(`artisans/${this.artisan.id}`);
 
- }
+ }*/
 
 }

@@ -9,8 +9,8 @@
             <p class="text-muted mb-1">Jardinier</p>
             <p class="text-muted mb-4">Morocco 🇲🇦</p>
             <div class="d-flex justify-content-center mb-2">
-              <button type="button" class="btn btn-primary">Éditer</button>
-              <button type="button" class="btn btn-outline-primary ms-1">Message</button>
+              <button type="button" class="btn btn-primary">Éditer mon profil</button>
+              <button type="button" class="btn btn-outline-primary ms-1" routerLink="post">Postuler une annonce</button>
             </div>
           </div>
         </div>
@@ -61,7 +61,20 @@
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">Morocco 🇲🇦</p>
+              </div>             
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Rôle</p>
               </div>
+              <div class="col-sm-9">
+                <select formControlName="roleName" id="role" style="width: 80px;">
+
+                  <option>Artisan</option>
+                  <option>Client</option>
+                </select>
+              </div>             
             </div>
           </div>
         </div>

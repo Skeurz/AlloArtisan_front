@@ -15,22 +15,31 @@ export class ListArtisanService {
 
   constructor ( private http :HttpClient){}
 
-   getAllArtisan():Observable<User[]>{
+ /*  getAllArtisan():Observable<User[]>{
     return this.http.get<User[]>
-    ('http://localhost:8090/users');
-   }
-   
+    ('http://localhost:8090/users');} */
+
+    getAllArtisan():Observable<User[]>{
+      return this.http.get<User[]>
+      (this.urlApi+'/users');}
+
+      getArtisanById(id: number): Observable<User>{
+        //  return this.http.get<User>(`${this.urlApi}user/${id}`)
+        return this.http.get<User>(`${this.urlApi}/profile/${id}`)
+        }   
+
    lancerPost(post:Post): Observable<Post> {
-  return this.http.post <Post>(`${this.urlApi}/offre`,post);
-}
+  return this.http.post <Post>(`${this.urlApi}/offre`,post);}
+
   getAllService():Observable<Post[]>{
-    return this.http.get<Post[]>(`${this.urlApi}/posts/service`);
-   
-  }
+    return this.http.get<Post[]>(`${this.urlApi}/posts/service`);}
+
   getAllBesoin():Observable<Post[]>{
-    return this.http.get<Post[]>(`${this.urlApi}/posts/besoin`);
-   
-  }
+    return this.http.get<Post[]>(`${this.urlApi}/posts/besoin`);}
+
+  deleteUser(id: number): Observable<any>{
+      return this.http.delete<any>(`${this.urlApi}delete/${id}`)
+    }
  
  
 

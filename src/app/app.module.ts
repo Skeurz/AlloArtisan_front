@@ -2,6 +2,7 @@
 import {  FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ArtisanListComponent } from './components/artisan-list/artisan-list.component';
@@ -17,6 +18,8 @@ import { PassoublieComponent } from './components/passoublie/passoublie.componen
 import { AuthentificationServiceService } from './core/services/authentification-service.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
+import { AdminEditComponent } from './components/admin-edit/admin-edit.component';
+
 
 
 
@@ -35,8 +38,7 @@ import { AdminPageComponent } from './components/admin-page/admin-page.component
     OffreComponent,
     PassoublieComponent,
     AdminPageComponent,
-    
-    
+    AdminEditComponent, 
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ import { AdminPageComponent } from './components/admin-page/admin-page.component
     ReactiveFormsModule,
     CoreModule,
     HttpClientModule,
+    RouterModule,
   ],
   providers: [AuthentificationServiceService],
   bootstrap: [AppComponent]

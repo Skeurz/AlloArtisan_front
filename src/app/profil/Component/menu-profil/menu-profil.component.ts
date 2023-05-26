@@ -25,15 +25,15 @@ export class MenuProfilComponent implements OnInit{
   }
   
   getData() {
-   // return sessionStorage.getItem('token');
+    return sessionStorage.getItem('token');
   }
     onAddRole(){
-     // this.service.addRoleToUser(this.profilForm.value).subscribe();
+    //  this.service.addRoleToUser(this.profilForm.value).subscribe();
 
 
     }
     getUserById(){
-      //  this.service.getUserById(){
+     //  this.service.getUserById(){
     
         }
 

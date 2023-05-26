@@ -7,7 +7,7 @@ import { MenuProfilComponent } from "./Component/menu-profil/menu-profil.compone
 const routes: Routes = [
 
     {path :'',component: MenuProfilComponent },
-    {path :'post',component: PostComponent },
+   {path :'post',component: PostComponent },
     //{path :'myProfil',component:ProfilComponent},
 
 ];
