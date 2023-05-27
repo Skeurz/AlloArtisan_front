@@ -38,10 +38,10 @@ export class ListArtisanService {
   getAllBesoin():Observable<Post[]>{
     return this.http.get<Post[]>(`${this.urlApi}/posts/besoin`);}
 
-  deleteUser(id: number): Observable<any>{
-      return this.http.delete<any>(`${this.urlApi}delete/${id}`)
+  deleteUser(id: number): Observable<any> {
+      const url = `${this.urlApi}/delete/${id}`;
+      return this.http.delete(url);
     }
- 
  
 
 
