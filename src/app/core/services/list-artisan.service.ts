@@ -28,6 +28,7 @@ export class ListArtisanService {
         return this.http.get<User>(`${this.urlApi}/profile/${id}`)
         }   
 
+        
    lancerPost(post:Post): Observable<Post> {
   return this.http.post <Post>(`${this.urlApi}/offre`,post);}
 

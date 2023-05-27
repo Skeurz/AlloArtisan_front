@@ -25,6 +25,7 @@ export class AdminPageComponent implements OnInit {
    this.artisan$=this.listArtisanService.getAllArtisan();
  }
 
+
 }
 
 

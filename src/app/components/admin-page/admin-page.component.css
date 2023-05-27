@@ -30,16 +30,16 @@ body {
 .text-muted.mb-0 {
 
 }*/
-table.align-middle.mb-0.bg-dark.border.border-dark{
-    width: 130vh;
-     align-content: center;
-   margin-top: 130px;
-   margin-left: 250px;
+.container{
+  width: 130vh;
+   align-content: center;
+ margin-top: 130px;
+ margin-left: 250px;
+}
+.border{
+padding: 10px;
 }
 
-tr {
-    color: white;
-}
-p{
-    color: white !important;
+.btn {
+margin-right: 10px;
 }

@@ -1,4 +1,51 @@
 <body>
+  <div class="container">
+    
+    <table class="table table-bordered text-light bg-dark" style="border-radius: 7px;">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Prénom </th>
+        <th>Nom</th>
+        <th>Nom d'utilisateur</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let a of artisan$ | async">
+        <td><span>{{a.id}}</span></td>
+        <td><span>{{a.prenom}}</span></td>
+        <td><span>{{a.nom}}</span></td>
+        <td><span>{{a.userName}}</span></td>
+        <td><span>{{a.email}}</span></td>
+        <td>
+          
+          <button class="btn btn-sm" style="background-color: #1c498d; color: white;"  >
+            <i class="fa fa-edit"></i> Edit</button>
+          <button class="btn btn-sm btn-danger">
+            <i class="fa fa-remove"></i> Delete</button>
+        </td>
+      </tr>
+      
+      </tbody>
+      
+    </table>
+    
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<!--<body>
     <table class="table align-middle mb-0 bg-dark border border-dark">
         <thead class="bg-dark">
           <tr>
@@ -54,7 +101,14 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Cancel</button>
             </div>
-          </ng-template>
+          </ng-template>-->
+
+
+
+
+
+
+
          <!-- <tr>
             <td>
               <div class="d-flex align-items-center">
@@ -129,6 +183,6 @@
           </button>
             </td>
           </tr>-->
-        </tbody>
+ <!--      </tbody>
       </table>
-</body>
+</body>--> 
