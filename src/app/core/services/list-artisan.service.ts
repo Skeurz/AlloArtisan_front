@@ -28,6 +28,17 @@ export class ListArtisanService {
         return this.http.get<User>(`${this.urlApi}/profile/${id}`)
         }   
 
+        getUser(id: string): Observable<User> {
+          const url = `${this.urlApi}/${id}`;
+          return this.http.get<User>(url);
+        }
+      
+        updateUser(user: User): Observable<User> {
+          const url = `${this.urlApi}/edit/${user.id}`;
+          return this.http.put<User>(url, user);
+        }
+
+
         
    lancerPost(post:Post): Observable<Post> {
   return this.http.post <Post>(`${this.urlApi}/offre`,post);}

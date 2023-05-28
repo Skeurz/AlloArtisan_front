@@ -4,6 +4,8 @@
     <table class="table table-bordered text-light bg-dark" style="border-radius: 7px;">
       <thead>
       <tr>
+        <th>Date de création</th>
+        <th>Date de modification</th>
         <th>ID</th>
         <th>Prénom </th>
         <th>Nom</th>
@@ -14,6 +16,8 @@
       </thead>
       <tbody>
       <tr *ngFor="let a of artisan$ | async">
+        <td><span>{{a.dateCreated | date: 'dd/MM/yyyy HH:mm:ss'}}</span></td>
+        <td><span>{{a.lastModified | date: 'dd/MM/yyyy HH:mm:ss'}}</span></td>
         <td><span>{{a.id}}</span></td>
         <td><span>{{a.prenom}}</span></td>
         <td><span>{{a.nom}}</span></td>
@@ -21,17 +25,25 @@
         <td><span>{{a.email}}</span></td>
         <td>
           
-          <button class="btn btn-sm" style="background-color: #1c498d; color: white;"  >
-            <i class="fa fa-edit"></i> Edit</button>
+          <button class="btn btn-sm" style="background-color: #1c498d; color: white;" 
+          (click)="openEditModal(a)" >
+            <i class="fa fa-edit" ></i> Edit</button>
           <button class="btn btn-sm btn-danger" (click)="deleteUser(a.id)">
             <i class="fa fa-remove"></i> Delete</button>
         </td>
       </tr>
       </tbody>
       
-    </table>
-    
+    </table> 
   </div>
+
+  
+ 
+
+
+  
+
+
 </body>
 
 

@@ -5,7 +5,9 @@ import { User } from 'src/app/core/modeles/user';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Location } from '@angular/common';
-//import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UserEditModalComponent } from '../user-edit-modal/user-edit-modal.component';
+
 
 
 @Component({
@@ -19,11 +21,12 @@ export class AdminPageComponent implements OnInit {
   url: string = "http://localhost:8090/";
   id: number;
 
- 
-  constructor(private listArtisanService :ListArtisanService,private router: Router, private http: HttpClient, private location: Location){ }
+
+  constructor(private listArtisanService :ListArtisanService,private router: Router, private http: HttpClient, private location: Location,
+    private modalService: NgbModal   ){ }
 
 
- deleteUser(id: number) {
+   deleteUser(id: number) {
   this.listArtisanService.deleteUser(id)
     .subscribe(
       () => { console.log('User deleted successfully.');
@@ -37,12 +40,38 @@ export class AdminPageComponent implements OnInit {
     );
 }
 
+
+
    ngOnInit() : void {
   // this.artisan$=this.listArtisanService.getAllArtisan();
    this.artisan$=this.listArtisanService.getAllArtisan();
 
  }
- 
+
+ openEditModal(user: User) {
+  const modalRef = this.modalService.open(UserEditModalComponent);
+  modalRef.componentInstance.user = Object.assign({}, user); // Create a new object to prevent modifications to the original user object
+
+  modalRef.result.then((result) => {
+    if (result === 'updated') {
+      // User was updated, you can perform any necessary actions, such as refreshing the user data
+      this.getUsers();
+    }
+  }).catch((error) => {
+    console.log('Modal dismissed');
+  });
+}
+
+getUsers() {
+  this.listArtisanService.getAllArtisan().subscribe(
+    (data: User[]) => {
+      this.users = data;
+    },
+    (error: any) => {
+      console.log('Error occurred while retrieving users', error);
+    }
+  );
+}
 
 
 }

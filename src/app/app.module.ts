@@ -18,7 +18,9 @@ import { PassoublieComponent } from './components/passoublie/passoublie.componen
 import { AuthentificationServiceService } from './core/services/authentification-service.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AdminPageComponent } from './components/admin-page/admin-page.component';
-import { AdminEditComponent } from './components/admin-edit/admin-edit.component';
+import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { UserEditModalComponent } from './components/user-edit-modal/user-edit-modal.component';
+
 
 
 
@@ -38,8 +40,12 @@ import { AdminEditComponent } from './components/admin-edit/admin-edit.component
     OffreComponent,
     PassoublieComponent,
     AdminPageComponent,
-    AdminEditComponent, 
+    UserEditModalComponent,
   ],
+
+  entryComponents: [UserEditModalComponent],
+  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -48,8 +54,9 @@ import { AdminEditComponent } from './components/admin-edit/admin-edit.component
     CoreModule,
     HttpClientModule,
     RouterModule,
+    NgbModule,
   ],
-  providers: [AuthentificationServiceService],
+  providers: [AuthentificationServiceService, NgbActiveModal],
   bootstrap: [AppComponent]
   
 })
